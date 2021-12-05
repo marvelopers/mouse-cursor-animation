@@ -53,6 +53,11 @@ export const resetFont = css`
 `;
 
 export const GlobalStyle = createGlobalStyle`
+  :root {
+    --safe-area-inset-top: env(safe-area-inset-top);
+    --safe-area-inset-bottom: calc(env(safe-area-inset-bottom) * 0.5);
+    --screen-height: calc(100vh - var(--safe-area-inset-bottom));
+  }
   html {
     -webkit-text-size-adjust: 100%;
     -moz-text-size-adjust: 100%;
@@ -166,16 +171,6 @@ export const GlobalStyle = createGlobalStyle`
       background: white;
     } */
   }
-`;
-
-// eslint-disable-next-line @typescript-eslint/no-unused-expressions
-createGlobalStyle`
-  :root {
-    --safe-area-inset-top: env(safe-area-inset-top);
-    --safe-area-inset-bottom: calc(env(safe-area-inset-bottom) * 0.5);
-    --screen-height: calc(100vh - var(--safe-area-inset-bottom));
-  }
-
 `;
 
 export default GlobalStyle;
