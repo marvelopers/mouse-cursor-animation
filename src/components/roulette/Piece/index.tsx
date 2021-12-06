@@ -1,18 +1,16 @@
 import React from 'react'
+import { Memu } from 'src/model/roulette';
 import * as Styles from './styled';
 
 interface PieceProps {
-  menu: {
-    food: string, 
-    text: string
-  }  
+  menu: Memu
 }
 
 const Piece = ({ menu }: PieceProps) => {
-  const { food, text } = menu; 
+  const { step, food, text } = menu; 
 
   return (
-    <Styles.Piece>
+    <Styles.Piece step={step}>
       {food}
       {text}
     </Styles.Piece>

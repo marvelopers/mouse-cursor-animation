@@ -1,12 +1,10 @@
 import React from 'react'
+import { Memu } from 'src/model/roulette';
 import Piece from '../Piece';
 import * as Styles from './styled';
 
 interface DiskProps {
-  data: {
-    food: string, 
-    text: string
-  }[]
+  data: Memu[]
 }
 
 const Disk = ({ data }: DiskProps) => {
