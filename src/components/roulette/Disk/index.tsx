@@ -11,7 +11,7 @@ const Disk = ({ data }: DiskProps) => {
 
   return (
     <Styles.Disk> 
-      {data.map((item)=> <Piece menu={item}/>)}
+      {data.map((item, idx)=> <Piece menu={item} idx={idx} degree={360/data.length}/>)}
     </Styles.Disk>
   )
 }

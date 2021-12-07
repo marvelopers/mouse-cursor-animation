@@ -4,16 +4,21 @@ import * as Styles from './styled';
 
 interface PieceProps {
   menu: Memu
+  degree: number
+  idx: number
 }
 
-const Piece = ({ menu }: PieceProps) => {
+const Piece = ({ menu , degree, idx }: PieceProps) => {
   const { step, food, text } = menu; 
 
   return (
-    <Styles.Piece step={step}>
+    <>
+    <Styles.Piece step={step} degree={idx*degree} range={degree}>
+      {degree}
       {food}
       {text}
     </Styles.Piece>
+    </>
   )
 }
 
