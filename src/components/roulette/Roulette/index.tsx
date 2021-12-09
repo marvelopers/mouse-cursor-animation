@@ -24,6 +24,26 @@ const mock = [
     food: 'ramen',
     text: '라면'
   },
+  {
+    step: 1, 
+    food: 'pizza',
+    text: '피자'
+  },
+  {
+    step: 2, 
+    food: 'chikin',
+    text: '치킨'
+  },
+  {
+    step: 3, 
+    food: 'sushi',
+    text: '초밥'
+  },
+  {
+    step: 1, 
+    food: 'ramen',
+    text: '라면'
+  },
 ]
 
 const Roulette = () => {
